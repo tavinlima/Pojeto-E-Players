@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90vw;
+    height: unset;
+    /* background-color:blue; */
+    margin: 0 auto;
+}
+
+header{
+    background-color: #1E1C21;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+
+.container_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5vw;
+}
+
+header img{
+    width: 12vw;
+    margin-right: 50px;
+}
+
+.header_nav{
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 788px;
+    font-size: 1.5vw;
+}
+
+.header_nav a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    margin-top: 4.5vw;
+}
+
+.banner_principal {
+    background-image: url(../assets/Banner_inicio_greninja.png);
+    height: 700px;
+    width: 100%;
+    background-position: center;
+}
+
+.conteudo_banner{
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #ffffff;
+    font-family: 'Titillium Web', sans-serif;
+    /* margin: 0; */
+    padding: 205px 35px;
+}
+h1{
+    font-size: 80px;
+}
+
+.conteudo_banner span{
+    font-size: 32px;
+}
+
+.conteudo_banner a{
+    color: #ffffff;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.conteudo_banner div{
+    background-color: #0721B4;
+    /* background-color: black; */
+    width: 188px;
+    height: 58px;
+    padding: 11px 29px;
+    margin: 35px 167px;
+    border-radius: 10px;
+}
+
+.box_jogos{
+    background-color:black;
+}
+
+.jogos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.jogos img{
+    width: 10vw;
+}
+
+.box_participar_ligas{
+    position: relative;
+    height: 588px;
+    background-image: url(../assets/bg-lol.jpg);
+    display: flex;
+    justify-content: space-between;
+}
+
+.retangulo_preto{
+    background-color: #000000;
+    width: 100%;
+    clip-path: polygon(100% 0, 100% 71%, 0 100%, 0 20%);
+    /* clip-path: polygon(0 33%, 100% 19%, 100% 57%, 0 71%); */
+}
+
+.conteudo_participar_ligas{
+    display: flex;
+    flex-direction: column;
+    margin-top: 180px;
+}
+
+.conteudo_participar_ligas h2{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: 36vw;
+}
+
+.conteudo_participar_ligas p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 36vw;
+}
+
+.box_participar_ligas img{
+    position: absolute;
+    margin: 44px 440px;
+} 
+
+.partidas{
+    background-color: black;
+    width: 100%;
+    height: 70px;
+}
+
+.partidas span{
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+}
