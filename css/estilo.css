@@ -113,30 +113,39 @@ h1{
 }
 
 .box_participar_ligas{
-    position: relative;
+    /* position: relative; */
     height: 588px;
     background-image: url(../assets/bg-lol.jpg);
     display: flex;
     justify-content: space-between;
+    object-fit: cover;
 }
 
 .retangulo_preto{
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
     background-color: #000000;
     width: 100%;
     clip-path: polygon(100% 0, 100% 71%, 0 100%, 0 20%);
     /* clip-path: polygon(0 33%, 100% 19%, 100% 57%, 0 71%); */
 }
 
+
 .conteudo_participar_ligas{
     display: flex;
     flex-direction: column;
     margin-top: 180px;
+    width: 36vw;
+    margin-left: 5vw;
 }
 
 .conteudo_participar_ligas h2{
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    text-align: justify;
     width: 36vw;
     margin-bottom: 5px;
 }
@@ -149,8 +158,8 @@ h1{
 }
 
 .box_participar_ligas img{
-    position: absolute;
-    margin: 44px 440px;
+    /* background-color: aqua; */
+    width: 54vw;
 } 
 
 .partidas{
@@ -160,44 +169,73 @@ h1{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
+}
+
+.conteudo_partidas{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.container_partidas{
+    display: flex;
+    align-items: center;
 }
 
 .partidas span{
     color: white;
     font-family: 'Titillium Web', sans-serif;
     text-transform: uppercase;
+    margin: 0 5px;
+    padding: 15px 0;
 }
 
 .line{
     background-color:#ffffff;
     width: 1px;
-    height: 45px;
+    height: 54px;
 }
 
 .noticias_e_jogos{
     display: flex;
     background-color: #1E1C21;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .noticias_e_jogos h2{
     color: white;
     font-family: 'Titillium Web', sans-serif;
-    margin: 5px 0px;
+    margin-top: 20px;
     text-transform: capitalize;
 }
 
+.container_noticias_e_jogos{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.container_noticias{
+    width: 688px;
+    margin: 0;
+}
+
+.posicionamento{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .noticia{
-    width: 210px;
-    height: 315px;
+    width: 15vw;
+    height: 363px;
     /* background-color: #000000; */
     background: -webkit-linear-gradient(top, rgba(5,5,5,1) 0%, rgba(9,9,9,1) 0%, rgba(9,9,9,1) 0%, rgba(54,54,54,1) 28%, rgba(54,54,54,1) 49%, rgba(54,54,54,1) 50%, rgba(54,54,54,1) 67%, rgba(5,5,5,1) 100%);
-    margin: 36px 0px;
+    margin: 20px 0px;
 }
 
 .noticia img{
-    width: 210px;
+    width: 15vw;
     height: auto;
 }
 
@@ -214,6 +252,12 @@ h1{
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     margin: 5px 10px;
+    font-size: 1.3vw;
+}
+
+.container_proximos_jogos{
+    width: 20vw;
+    margin: 0;
 }
 
 .proximos_jogos h2{
@@ -223,14 +267,24 @@ h1{
 }
 
 .conteudo_proximos_jogos{
-    width: 275px;
+    width: 20vw;
     height: 766px;
     /* background-color: #000000; */
     background: -webkit-linear-gradient(top, rgba(5,5,5,1) 0%, rgba(9,9,9,1) 0%, rgba(9,9,9,1) 0%, rgba(54,54,54,1) 17%, rgba(54,54,54,1) 49%, rgba(54,54,54,1) 50%, rgba(54,54,54,1) 80%, rgba(5,5,5,1) 100%);
-    padding: 16px 55px;
+    padding: 16px 53px;
+    margin: 20px 0;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    align-items: center;
+}
+
+.container_conteudo_proximos_jogos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 16vw;
+    font-size: 1.3vw;
 }
 
 .conteudo_proximos_jogos span{
@@ -247,12 +301,21 @@ footer{
 .container_footer{
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
     height: 300px;
+}
+
+.container_footer a{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
 }
 
 .container_footer span{
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     /* text-transform: capitalize; */
 }
 
@@ -261,6 +324,7 @@ footer{
     color: white;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    margin-top: 40px;
 } 
 
 .paginas{
@@ -268,29 +332,53 @@ footer{
     color: white;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    margin-top: 40px;
 }
 
 .container_footer img{
     width: 16vw;
 }
 
+.logo_e_players{
+    margin: 0 12vw;
+}
+
+.container_email_sociais{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 18vw;
+}
+
 .newsletter{
     width: auto;
+    height: 4vw;
+}
+
+.newsletter input{
+    height: 30px
 }
 
 .newsletter button{
     width: 90px;
     background-color: #0721B4;
     color:#ffffff;
+    font-weight: bold;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     border-style: none;
+    height: 30px;
 }
 
-.siga_nos{
-    width: 360px;
+.container_siga_nos{
+    margin-top:5px;
+    width: 20vw;
+    height: 5vw;
+    display:flex;
+    align-items: center;
 }
 
-.siga_nos img{
-    width: 40px;
+.container_siga_nos img{
+    width: 3vw;
+    margin: 0 5px;
 }
