@@ -622,7 +622,7 @@ footer{
     width: 18vw;
     height: 3vw;
     margin: 30px 23vw;
-    background-color: #0721B4;
+    background-color: #E56E0E;
     color: #ffffff;
     font-size: 19px;
     text-decoration: none;
@@ -728,7 +728,7 @@ footer{
         /* width: 70vw;
         margin-left: 32%;
         margin-top: 22.1vh; */
-        position: unset;
+        display: none;
     }
 
     .partidas{
