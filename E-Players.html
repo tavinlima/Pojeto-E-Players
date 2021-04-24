@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto E-Players</title>
+    <script src="https://kit.fontawesome.com/4ae9ddea7e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
@@ -15,23 +16,29 @@
         <div class="container container_header">
             <img src="assets/logo.svg" alt="logo_e-players">
             <nav id="links" class="header_nav">
-                <a href="#inicio">início</a>
-                <a href="#horarios">horários</a>
-                <a href="#campeonato">campeonato</a>
-                <a href="#resultados">resultados</a>
-                <a href="#noticias">noticias</a>
+                <a href="#inicio" onclick="BotaoDoMenu()">início</a>
+                <a href="#horarios" onclick="BotaoDoMenu()">horários</a>
+                <a href="#campeonato" onclick="BotaoDoMenu()">campeonato</a>
+                <a href="#resultados" onclick="BotaoDoMenu()">resultados</a>
+                <a href="#noticias" onclick="BotaoDoMenu()">noticias</a>
             </nav>
+            <a class="btn_menu" href="javascript:void(0)" onclick="BotaoDoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
 
     </header>
 
-    <main>
+    <main onclick="SairMenu()">
 
         <section id="inicio" class="banner_principal">
             <div class="conteudo_banner">
                 <h1>Liga E-Players</h1>
                 <span>O maior portal de campeonatos online</span>
-                <div><a href="#inscreva_se">inscreva-se</a></div>
+                <!-- <div class=btn_cadastrar> -->
+                <button class="cadastre_se_jogador">cadastrar jogador</button>
+                <button class="cadastre_time">cadastrar time</button>
+                <!-- </div> -->
             </div>
         </section>
 
@@ -242,38 +249,38 @@
     </main>
 
     <footer>
-        <section class="container container_footer">
-
-            <div class="links_footer">
-                <ul class="links_uteis">
-                    <span>Links úteis</span>
-                    <li><a href="#">Regras de utilização</a></li>
-                    <li><a href="#">Suporte</a></li>
-                    <li><a href="#">Central de ajuda</a></li>
-                    <li><a href="#">contato</a></li>
-                </ul>
-            </div>
-
-            <div class="páginas_footer">
-                <ul class="paginas">
-                    <span>Páginas</span>
-                    <li> <a href="#">Início</a> </li>
-                    <li> <a href="#">Campeonatos</a> </li>
-                    <li> <a href="#">Resultados</a> </li>
-                    <li> <a href="#">Notícias</a> </li>
-                    <li> <a href="#">Login/Cadastro</a> </li>
-                </ul>
-            </div>
-
-            <img class="logo_e_players" src="assets/logo.svg" alt="logo e-players">
-
-            <div class="container_email_sociais">
-                <div class="newsletter">
-                    <span>Faça parte do nosso clan, assine nossa newsletter!</span>
-                    <div><input type="email">
-                        <button>Cadastrar</button>
-                    </div>
+        <section class="container container_footer"> 
+                <div class="links_footer">
+                    <ul class="links_uteis">
+                        <span>Links úteis</span>
+                        <li><a href="#">Regras de utilização</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
                 </div>
+
+                <div class="páginas_footer">
+                    <ul class="paginas">
+                        <span>Páginas</span>
+                        <li> <a href="#inicio">Início</a> </li>
+                        <li> <a href="#campeonato">Campeonatos</a> </li>
+                        <li> <a href="#resultados">Resultados</a> </li>
+                        <li> <a href="#noticias">Notícias</a> </li>
+                        <li> <a href="#login">Login/Cadastro</a> </li>
+                    </ul>
+                </div>
+
+                <img class="logo_e_players" src="assets/logo.svg" alt="logo e-players">
+
+                <div class="container_email_sociais">
+                    <div class="newsletter">
+                        <span>Faça parte do nosso clan, assine nossa newsletter!</span>
+                        <div class=newsletter_cadastro>
+                            <input type="email">
+                            <button>Cadastrar</button>
+                        </div>
+                    </div>
 
                 <div class="container_siga_nos">
                     <span>Siga-nos em:</span>
@@ -284,6 +291,37 @@
             </div>
         </section>
     </footer>
+
+    <script>
+        var menu = document.getElementById("links");
+        function BotaoDoMenu() {
+            if (screen.width <= 768) {
+                if (menu.style.display === "flex") {
+                    //Esconder o menu
+                    menu.style.display = "none";
+                } else {
+                    //Mostrar o menu
+                    menu.style.display = "flex";
+                }
+            }
+        }
+
+        function SairMenu() {
+            if (screen.width <= 768) {
+                if (menu.style.display === "flex") {
+                    //Esconder o menu
+                    menu.style.display = "none";
+                }
+            }
+        }
+        window.onresize = () => {
+            if(screen.width > 768) {
+                menu.style.display = "flex";
+            } else{
+                menu.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
